@@ -1,0 +1,41 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "folk.sisby",
+		"id": "totem-anywhere-standalone",
+		"version": "${version}",
+		"metadata": {
+			"name": "Totem Anywhere Standalone",
+			"description": "A mod for Quilt that allows using totem of undying your inventory.",
+			"contributors": {
+				"Me!": "Owner"
+			},
+			"contact": {
+				"homepage": "https://modrinth.com/mod/totem-anywhere-standalone",
+				"issues": "https://github.com/sisby-folk/totem-anywhere-standalone/issues",
+				"sources": "https://github.com/sisby-folk/totem-anywhere-standalone"
+			},
+			"icon": "assets/totem_anywhere_standalone/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "folk.sisby.totem_anywhere_standalone.TotemAnywhereStandalone",
+			"client_init": "folk.sisby.totem_anywhere_standalone.TotemAnywhereStandaloneClient"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.16.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=1.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.18.2"
+			}
+		]
+	},
+	"mixin": "totem_anywhere_standalone.mixins.json"
+}

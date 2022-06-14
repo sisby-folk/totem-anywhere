@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "folk.sisby.totem_anywhere_standalone.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "CheckInventoryMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
