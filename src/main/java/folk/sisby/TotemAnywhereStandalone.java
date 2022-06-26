@@ -1,28 +1,28 @@
 package folk.sisby;
 
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.util.Hand;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 
 public class TotemAnywhereStandalone {
-    public static ItemStack tryUsingDeathTotemFromInventory(LivingEntity entity, InteractionHand hand) {
+    public static ItemStack tryUsingDeathTotemFromInventory(LivingEntity entity, Hand hand) {
         ItemStack totem = new ItemStack(Items.TOTEM_OF_UNDYING);
 
-        if (entity instanceof Player player) {
-            Inventory inventory = player.getInventory();
+        if (entity instanceof PlayerEntity player) {
+			PlayerInventory inventory = player.getInventory();
 
             if (inventory.contains(totem)) {
-                if (player.getOffhandItem().getItem() == Items.TOTEM_OF_UNDYING) {
-                    return player.getOffhandItem();
+                if (player.getOffHandStack().getItem() == Items.TOTEM_OF_UNDYING) {
+                    return player.getOffHandStack();
                 } else {
-                    return inventory.getItem(inventory.findSlotMatchingItem(totem));
+                    return inventory.getStack(inventory.getSlotWithStack(totem));
                 }
             }
         }
 
-        return entity.getItemInHand(hand);
+        return entity.getStackInHand(hand);
     }
 }
