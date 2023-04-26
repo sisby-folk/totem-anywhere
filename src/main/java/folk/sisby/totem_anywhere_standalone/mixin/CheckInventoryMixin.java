@@ -1,19 +1,17 @@
 package folk.sisby.totem_anywhere_standalone.mixin;
 
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.item.Items;
 import net.minecraft.util.Hand;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import folk.sisby.TotemAnywhereStandalone;
 
 @Mixin(LivingEntity.class)
 public class CheckInventoryMixin {
-    /**
-     * Defer to TotemWorksFromInventory.tryUsingDeathTotemFromInventory when checking if the entity is holding a totem.
-     * If the check passes (the entity has one in inventory) then return true.
-     */
     @Redirect(
         method = "tryUseTotem",
         at = @At(
@@ -22,6 +20,15 @@ public class CheckInventoryMixin {
         )
     )
     private ItemStack hookCheckTotemDeathProtection(LivingEntity livingEntity, Hand hand) {
-        return TotemAnywhereStandalone.tryUsingDeathTotemFromInventory(livingEntity, hand);
+		if (livingEntity instanceof PlayerEntity player) {
+			if (player.getInventory().contains(Items.TOTEM_OF_UNDYING.getDefaultStack())) {
+				if (player.getOffHandStack().getItem() == Items.TOTEM_OF_UNDYING) {
+					return player.getOffHandStack();
+				} else {
+					return player.getInventory().getStack(player.getInventory().getSlotWithStack(Items.TOTEM_OF_UNDYING.getDefaultStack()));
+				}
+			}
+		}
+		return livingEntity.getStackInHand(hand);
     }
 }
