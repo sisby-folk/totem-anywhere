@@ -13,10 +13,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class CheckInventoryMixin {
 	@Redirect(method = "tryUseTotem", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getStackInHand(Lnet/minecraft/util/Hand;)Lnet/minecraft/item/ItemStack;"))
 	private ItemStack replaceHandStackWithInventoryStack(LivingEntity livingEntity, Hand hand) {
-		if (livingEntity instanceof PlayerEntity player && player.getInventory().contains(Items.TOTEM_OF_UNDYING.getDefaultStack()) && player.getOffHandStack().getItem() != Items.TOTEM_OF_UNDYING && player.getMainHandStack().getItem() != Items.TOTEM_OF_UNDYING) {
-			return player.getInventory().getStack(player.getInventory().getSlotWithStack(Items.TOTEM_OF_UNDYING.getDefaultStack()));
-		} else {
-			return livingEntity.getStackInHand(hand);
-		}
+		return (livingEntity instanceof PlayerEntity player && player.getInventory().contains(Items.TOTEM_OF_UNDYING.getDefaultStack()) && player.getOffHandStack().getItem() != Items.TOTEM_OF_UNDYING && player.getMainHandStack().getItem() != Items.TOTEM_OF_UNDYING) ? player.getInventory().getStack(player.getInventory().getSlotWithStack(Items.TOTEM_OF_UNDYING.getDefaultStack())) : livingEntity.getStackInHand(hand);
 	}
 }
