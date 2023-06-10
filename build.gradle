@@ -39,7 +39,6 @@ dependencies {
 	minecraft libs.minecraft
 	mappings variantOf(libs.qm) { classifier "intermediary-v2" }
 	modImplementation libs.ql
-	modImplementation libs.qsl
 }
 
 
