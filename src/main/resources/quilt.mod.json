@@ -2,20 +2,20 @@
 	"schema_version": 1,
 	"quilt_loader": {
 		"group": "folk.sisby",
-		"id": "totem-anywhere-standalone",
+		"id": "totem-anywhere",
 		"version": "${version}",
 		"metadata": {
-			"name": "Totem Anywhere Standalone",
+			"name": "Totem Anywhere",
 			"description": "Allows using totem of undying your inventory.",
 			"contributors": {
 				"Sisby Folk": "Co-Authors"
 			},
 			"contact": {
-				"homepage": "https://modrinth.com/mod/totem-anywhere-standalone",
-				"issues": "https://github.com/sisby-folk/totem-anywhere-standalone/issues",
-				"sources": "https://github.com/sisby-folk/totem-anywhere-standalone"
+				"homepage": "https://modrinth.com/mod/totem-anywhere",
+				"issues": "https://github.com/sisby-folk/totem-anywhere/issues",
+				"sources": "https://github.com/sisby-folk/totem-anywhere"
 			},
-			"icon": "assets/totem_anywhere_standalone/icon.png"
+			"icon": "assets/totem_anywhere/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"depends": [
@@ -29,5 +29,5 @@
 			}
 		]
 	},
-	"mixin": "totem_anywhere_standalone.mixins.json"
+	"mixin": "totem_anywhere.mixins.json"
 }

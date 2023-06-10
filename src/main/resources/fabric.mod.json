@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "totem-anywhere-standalone",
+  "id": "totem-anywhere",
   "version": "${version}",
 
-  "name": "Totem Anywhere Standalone",
+  "name": "Totem Anywhere",
   "description": "Allows using totem of undying your inventory.",
   "authors": [
     "Sisby Folk"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/totem-anywhere-standalone",
-    "issues": "https://github.com/sisby-folk/totem-anywhere-standalone/issues",
-    "sources": "https://github.com/sisby-folk/totem-anywhere-standalone"
+    "homepage": "https://modrinth.com/mod/totem-anywhere",
+    "issues": "https://github.com/sisby-folk/totem-anywhere/issues",
+    "sources": "https://github.com/sisby-folk/totem-anywhere"
   },
 
   "license": "LGPL-3.0-only",
-  "icon": "assets/totem_anywhere_standalone/icon.png",
+  "icon": "assets/totem_anywhere/icon.png",
 
   "environment": "*",
 
@@ -25,6 +25,6 @@
     "java": ">=17"
   },
   "mixins": [
-    "totem_anywhere_standalone.mixins.json"
+    "totem_anywhere.mixins.json"
   ]
 }

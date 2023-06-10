@@ -81,7 +81,7 @@ publishing {
 if (System.getenv("MODRINTH_TOKEN")) {
 	modrinth {
 		token = System.getenv("MODRINTH_TOKEN")
-		projectId = 'totem-anywhere-standalone'
+		projectId = 'totem-anywhere'
 		versionNumber = project.version
 		versionName = origVersion
 		versionType = 'release'
@@ -91,7 +91,7 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		detectLoaders = false
 		dependencies {
 		}
-		changelog = "Changelog: https://github.com/sisby-folk/totem-anywhere-standalone/releases/tag/v" + origVersion
+		changelog = "Changelog: https://github.com/sisby-folk/totem-anywhere/releases/tag/v" + origVersion
 		syncBodyFrom = rootProject.file("README.md").text
 	}
 }
@@ -100,7 +100,7 @@ if (System.getenv("GITHUB_TOKEN")) {
 	githubRelease {
 		token System.getenv("GITHUB_TOKEN")
 		owner "sisby-folk"
-		repo "totem-anywhere-standalone"
+		repo "totem-anywhere"
 		tagName 'v' + origVersion
 		releaseName origVersion
 		targetCommitish default_branch

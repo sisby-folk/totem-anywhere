@@ -1,4 +1,4 @@
-package folk.sisby.totem_anywhere_standalone.mixin;
+package folk.sisby.totem_anywhere.mixin;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
