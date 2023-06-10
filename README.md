@@ -1,14 +1,14 @@
-**Totem Anywhere Standalone** is a single-mixin adaptation of the `totems-work-in-inventory` module from [Charm](https://modrinth.com/mod/charm).
+<center>Makes totems of undying activate from any slot in your inventory, not just your hands.</center>
 
-Totems of undying will activate on death when in any slot of your inventory, not just your offhand.
+---
 
+<center><b>Packs:</b> <a href="https://modrinth.com/modpack/tinkerers-quilt">Tinkerer's Quilt</a> (<a href="https://modrinth.com/modpack/tinkerers-silk">Silk</a>) - <a href="https://modrinth.com/modpack/switchy-pack">Switchy Pack</a></center>
+<center><b>Mods:</b> <a href="https://modrinth.com/mod/switchy">Switchy</a> - <a href="https://modrinth.com/mod/origins-minus">Origins Minus</a> (<a href="https://modrinth.com/mod/tinkerers-statures">Statures</a>) - <a href="https://modrinth.com/mod/tinkerers-smithing">Tinkerer's Smithing</a></center>
+
+---
 
 ## Further Info
 
 All mods are built on the work of many others.
 
-We made this mod for [Tinkerer's Quilt](https://modrinth.com/modpack/tinkerers-quilt) - our modpack about ease of
-play and vanilla content.
-
-
-We're open to suggestions for how to implement stuff better - if you see something wonky and have an idea - let us know.
+We made this mod for [Tinkerer's Quilt](https://modrinth.com/modpack/tinkerers-quilt) - our modpack about ease of play and vanilla content.
