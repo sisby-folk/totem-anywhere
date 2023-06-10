@@ -7,7 +7,7 @@
 
 ---
 
-## Further Info
+## Afterword
 
 All mods are built on the work of many others.
 
