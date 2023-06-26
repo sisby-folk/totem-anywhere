@@ -14,11 +14,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @SuppressWarnings("ConstantConditions")
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
-	@ModifyVariable(method = "tryUseTotem", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Hand;values()[Lnet/minecraft/util/Hand;", ordinal = 0), ordinal = 0)
-	private ItemStack totemStackInventoryFallback(ItemStack totemStack) {
-		if ((Object) this instanceof PlayerEntity player && player.getInventory().contains(Items.TOTEM_OF_UNDYING.getDefaultStack())) {
+	@Redirect(method = "tryUseTotem", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;getStackInHand(Lnet/minecraft/util/Hand;)Lnet/minecraft/item/ItemStack;"))
+	private ItemStack totemStackInventoryFallback(LivingEntity entity, Hand hand) {
+		if (hand == Hand.OFF_HAND && !entity.getOffHandStack().isOf(Items.TOTEM_OF_UNDYING) && entity instanceof PlayerEntity player && player.getInventory().contains(Items.TOTEM_OF_UNDYING.getDefaultStack())) {
 			return player.getInventory().getStack(player.getInventory().getSlotWithStack(Items.TOTEM_OF_UNDYING.getDefaultStack()));
 		}
-		return totemStack;
+		return entity.getStackInHand(hand);
 	}
 }
