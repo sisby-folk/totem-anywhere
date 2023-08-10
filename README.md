@@ -1,4 +1,5 @@
-<center>Makes totems of undying activate from any slot in your inventory, not just your hands.</center>
+<center>Makes totems of undying activate from any slot in your inventory, not just your hands.<br/>
+Requires <a href="https://modrinth.com/mod/connector">Connector</a> on forge.</center>
 
 ---
 
