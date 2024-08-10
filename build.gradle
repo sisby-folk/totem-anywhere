@@ -87,6 +87,7 @@ modrinth {
 	token = System.getenv("MODRINTH_TOKEN")
 	projectId = project.name
 	versionNumber = project.version
+	versionName = baseVersion
 	uploadFile = remapJar
 	gameVersions = compatibleVersions.split(", ").toList()
 	loaders = compatibleLoaders.split(", ").toList()
