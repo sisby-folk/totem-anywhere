@@ -13,7 +13,7 @@ displayURL = "${homepage}"
 logoFile = "assets/totem_anywhere/icon.png"
 
 [properties]
-"connector:placeholder"=true
+"connector:placeholder" = true
 
 [[dependencies.${ modId }]]
 modId = "connector"

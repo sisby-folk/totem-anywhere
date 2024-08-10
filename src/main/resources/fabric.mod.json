@@ -1,24 +1,24 @@
 {
-  "schemaVersion": 1,
-  "id": "${modId}",
-  "version": "${version}",
-  "name": "${modName}",
-  "description": "${modDescription}",
-  "authors": [
-    "${authors}"
-  ],
-  "contact": {
-    "homepage": "${homepage}",
-    "issues": "${issues}",
-    "sources": "${sources}"
-  },
-  "license": "${license}",
-  "icon": "assets/totem_anywhere/icon.png",
-  "depends": {
-    "fabricloader": ">=0.4",
-    "minecraft": ">=1.14"
-  },
-  "mixins": [
-    "totem_anywhere.mixins.json"
-  ]
+	"schemaVersion": 1,
+	"id": "${modId}",
+	"version": "${version}",
+	"name": "${modName}",
+	"description": "${modDescription}",
+	"authors": [
+		"${authors}"
+	],
+	"contact": {
+		"homepage": "${homepage}",
+		"issues": "${issues}",
+		"sources": "${sources}"
+	},
+	"license": "${license}",
+	"icon": "assets/totem_anywhere/icon.png",
+	"depends": {
+		"fabricloader": ">=0.4",
+		"minecraft": ">=1.14"
+	},
+	"mixins": [
+		"totem_anywhere.mixins.json"
+	]
 }
