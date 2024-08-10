@@ -1,13 +1,11 @@
 <!--suppress HtmlDeprecatedTag, XmlDeprecatedElement -->
-<center>Makes totems of undying activate from any slot in your inventory, not just your hands.<br/>
-Requires <a href="https://modrinth.com/mod/connector">Connector</a> on (neo)forge.</center>
+<center>
+<img alt="preview" src="https://cdn.modrinth.com/data/f4ppGsAE/images/0c010f56929ca2f00722c5534b41f6ed422c58d2.png"/>
 
----
+Makes totems of undying activate from any slot in your inventory, not just your hands.<br/>
+Requires <a href="https://modrinth.com/mod/connector">Connector</a> on (neo)forge.
 
-<center><b>Packs:</b> <a href="https://modrinth.com/modpack/tinkerers-quilt">Tinkerer's Quilt</a> (<a href="https://modrinth.com/modpack/tinkerers-silk">Silk</a>) - <a href="https://modrinth.com/modpack/switchy-pack">Switchy Pack</a></center>
-<center><b>Mods:</b> <a href="https://modrinth.com/mod/switchy">Switchy</a> - <a href="https://modrinth.com/mod/origins-minus">Origins Minus</a> (<a href="https://modrinth.com/mod/tinkerers-statures">Statures</a>) - <a href="https://modrinth.com/mod/tinkerers-smithing">Tinkerer's Smithing</a></center>
-
----
+</center>
 
 ## Afterword
 
