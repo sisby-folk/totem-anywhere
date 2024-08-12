@@ -10,7 +10,7 @@ displayName = "${modName}"
 description = '''${modDescription}'''
 authors = "${members}"
 displayURL = "${homepage}"
-logoFile = "assets/totem_anywhere/icon.png"
+logoFile = "assets/${modId}/icon.png"
 
 [properties]
 "connector:placeholder" = true

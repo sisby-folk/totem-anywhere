@@ -13,12 +13,12 @@
 		"sources": "${sources}"
 	},
 	"license": "${license}",
-	"icon": "assets/totem_anywhere/icon.png",
+	"icon": "assets/${modId}/icon.png",
 	"depends": {
 		"fabricloader": ">=0.4",
 		"minecraft": ">=1.14"
 	},
 	"mixins": [
-		"totem_anywhere.mixins.json"
+		"${modId}.mixins.json"
 	]
 }
